@@ -1,0 +1,28 @@
+<div class="form-group">
+  <input 
+  placeholder="Search for someone..."
+  type="text"
+  [formControl]="searchField"
+  >
+</div>
+<p *ngIf="isLoading">Loading...</p>
+<ng-container *ngIf="isNotEmptySearch">
+  <div class="card bg-light mb-3"
+      style="max-width: 640px;"
+      *ngFor="let person of persons | async">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="{{ person.imgPath }}" class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h1 class="card-title">{{ person.name }}</h1>
+          <h4>Age:{{ person.age }}</h4>
+          <p class="card-text">{{ person.line }}<br>{{ person.city }} {{ person.state }} {{ person.zip }}</p>
+          <h4 class="card-text"><u>Interests Include:</u></h4>
+          <p class="card-text">{{ person.interests }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<ng-container>
