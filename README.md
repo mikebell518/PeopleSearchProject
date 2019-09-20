@@ -18,8 +18,8 @@ The API call GetPersons generates a random delay of up to 2 seconds to simiulate
 - Entity Framework
 
 ### Installing/Running the App
-- Pull the project to a local folder.
-- Add the project to Visual Studio.
+- In Visual Studio, pull the project from github
+- Link a localDb to the project nameing the db PeopleSearch. 
 - Run the IIS Express Debuger in Visual Studio.
 - From the projects Angular folder, run ng serve
 - Navigate to http://localhost:4200
