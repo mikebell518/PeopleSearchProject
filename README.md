@@ -15,6 +15,7 @@ The API call GetPersons generates a random delay of up to 2 seconds to simiulate
 - Visual Studio
 - Angular CLI
 - LocalDb
+- Entity Framework
 
 ### Installing/Running the App
 - Pull the project to a local folder.
