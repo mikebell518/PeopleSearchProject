@@ -1,5 +1,5 @@
 # PeopleSearchProject
-A simple Angular app with a reactive form that makes an API calls to the .net backend. The app displays the returned list of people in a card per person format. The api call is an observable that triggers on a change event. The observable is defined with a debouncetime of 400ms to consolidate calls to the back end. 
+A simple Angular app with a reactive form that makes an API call to the .net backend. The app displays the returned list of people in a card per person format. The api call is an observable that triggers on a change event and an observable is defined with a debouncetime of 400ms to consolidate calls to the back end. 
 
 The backend api is built with the Entity Framework that seeds the following persons to the database.
 - Mike Bell
