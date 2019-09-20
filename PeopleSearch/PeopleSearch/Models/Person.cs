@@ -1,8 +1,11 @@
-﻿using System;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace PeopleSearch.Models
 {
+    /*
+     * Person Class Model for Db. 
+     */
     public class Person
     {
         [Key]

@@ -9,7 +9,10 @@ import { debounceTime , distinctUntilChanged, switchMap, tap  } from 'rxjs/opera
   selector: 'app-search-results',
   templateUrl: './search-results.component.html',
 })
-
+  /*
+  * Gets the data used in the search results cards that display.
+  * An Observable of the service is used to better handle delayed trafic from the api service
+  */
 export class SearchResultsComponent {
   private persons: Observable<Person[]>;
   private peopleService:SearchService;
@@ -27,7 +30,8 @@ export class SearchResultsComponent {
     this.searchField = new FormControl();
       console.log(this.isNotEmptySearch);
       this.persons = this.searchField.valueChanges.pipe(
-      debounceTime(300), 
+      // add a slight delay from the change event to optimize number of calls to the back end
+      debounceTime(400), 
       distinctUntilChanged(),
       tap( () => this.isLoading = true),
       switchMap(obj => this.peopleService.getPeople(this.searchField.value)),
