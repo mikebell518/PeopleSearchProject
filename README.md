@@ -14,6 +14,7 @@ The API call GetPersons generates a random delay of up to 2 seconds to simiulate
 ### Prerequisites
 - Visual Studio
 - Angular CLI
+- NodeJS
 - LocalDb
 - Entity Framework
 
