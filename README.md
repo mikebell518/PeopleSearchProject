@@ -21,6 +21,7 @@ The API call GetPersons generates a random delay of up to 2 seconds to simiulate
 ### Installing/Running the App
 - In Visual Studio, pull the project from github
 - Link a localDb to the project nameing the new db PeopleSearch. The app looks for the db in the defulat DataDirectory which is the app_data directory in the project. If localDB does not store the file there you may need to copy it over. 
+- Before runnigng the app the first time, you will need to run update-database from the Package Manager Console. This will seed the db. 
 - Run the IIS Express Debuger in Visual Studio.
 - From the projects Angular folder, run ng serve
 - Navigate to http://localhost:4200
